@@ -3,7 +3,6 @@ library start;
 import 'dart:io' hide Socket;
 import 'dart:async';
 import 'dart:convert';
-import 'dart:mirrors';
 import 'package:logging/logging.dart';
 import 'package:http_server/http_server.dart';
 import 'package:mime/mime.dart';
