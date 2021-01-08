@@ -84,7 +84,7 @@ class Request {
           }, onDone: () {
             completer.complete(payload);
           });
-    } else if (isMime('application/json')) {
+    } else if (isMime('application/json', loose: true)) {
 			const Utf8Decoder().bind(_request)
           .listen((content) {
             final payload = jsonDecode(content);
