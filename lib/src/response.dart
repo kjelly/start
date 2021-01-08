@@ -13,7 +13,7 @@ class Response {
     return this;
   }
 
-  Response get(String name) => header(name);
+  List<String>? get(String name) => _response.headers[name];
 
   Response set(String name, String value) => header(name, value);
 
