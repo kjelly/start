@@ -10,12 +10,12 @@ class Request {
 
   bool accepts(String type) =>
       _request.headers[HttpHeaders.acceptHeader]
-          .where((name) => name.split(',').indexOf(type) > 0)
+          ?.where((name) => name.split(',').indexOf(type) > 0)
           .length > 0;
 
   bool isMime(String type, {loose: false}) =>
       _request.headers[HttpHeaders.contentTypeHeader]
-          .where((value) => loose ? value.contains(type) : value == type)
+          ?.where((value) => loose ? value.contains(type) : value == type)
           .isNotEmpty;
 
   bool get isForwarded => _request.headers['x-forwarded-host'] != null;
